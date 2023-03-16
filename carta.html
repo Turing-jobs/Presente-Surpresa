@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente!!</title>
+</head>
+<body>
+    <audio>
+        <source src="poema2.mp3" type="audio/mp3"> 
+    </audio>
+    <audio src="poema2.mp3"></audio>
+    <button>Play</button>
+    <h1>Se estivesse em uma pequena estrofe e dessa fizesse minha morada, teria uma pequena
+         parcela, e conta a você. As pessoas são como pequenas viajantes uns vão mansos e com leve sorriso que 
+         se perde a racionalidade. Você é uma viajante que chegou aonde se tinha asteroides, em abalar seu coração o seu pequeno foguete, 
+         não se dita no que no espaço se encontra, não fique infeliz, porque o que se busca é a felicidade. Eu entendo que o que se encontra
+          é um universo, longe que chamamos de felicidade, um alegre sorriso no desespero onde se embarca é o nosso amor, sei que Antônia não 
+          está entre nós. Mas pense bem ela foi conhecer de Deus, e reforçou os laços da gente nos uniu mais. Ela foi uma boa viajante que 
+          sofreu pelas dores mesmo assim, tava bem sempre com um sorriso marcante, um sorriso ardente, uma fonte de felicidade. Não se perturbe
+           pelo que temos em concreto, e sim pelo que temos em comum. Viajantes vem e nos deixam a sós, mas fizeram seus papéis aqui na terra. 
+           É difícil não termos mais, são progenitores que fazem grandes pessoas como você, uma onda que se alastra ao tempo, tudo inicia-se a 
+           um parágrafo e tem um ponto final. Desculpe lhe avisar, mas todas as lembranças muitas vezes serão passageiras. Um dia teremos que 
+           nos separar. Eu estarei em um maior barco a velejar entre o grande mar e você estará em uma ilha, vendo eu velejando a minha vida e um
+            dia terei um barco maior para te ajudar. Você é inesquecível e sempre estará dentro do amor.
+        </h1>
+    <style>
+        button{
+            position: inline-block;
+            justify-content: center;
+            border-radius: 2.4px;
+            width: 100px;
+            height: 40px;
+        }
+        h1{
+            font-family: monospace;
+            color: #fff;
+        }
+        body{
+            background-color: black;
+        }
+        h1::after{
+            content:'|';
+        }
+        
+
+    </style>
+    <script> 
+        function typeWriter(elemento){
+            elemento.style.display = "block";
+            const texto = elemento.innerHTML.split("");
+            elemento.innerHTML = "";
+            texto.forEach((letra,i) => {
+                console.log(letra);
+                setTimeout(() => elemento.innerHTML += letra, 142 * i);
+            });
+        };
+        
+        
+        const GB = document.querySelector("h1");
+        
+        GB.style.display = "none";
+        alert("Mãe, aperte o play da música, coloque o volume alto e pegue um fone de ouvido!!! ")
+        const button = document.querySelector('button');
+        
+        button.addEventListener('click', function(){
+            alert("O botão foi apertado, agora espere a musica começar!!! E confira o volume!!!")
+            const audio = document.querySelector('audio');
+            audio.play();
+            function syncDelay(milliseconds){
+                var start = new Date().getTime();
+                var end=0;
+                while( (end-start) < milliseconds){
+                    end = new Date().getTime();
+                }
+            }
+            syncDelay(20000);
+            typeWriter(GB);
+        });        
+    </script>
+</body>
+</html>

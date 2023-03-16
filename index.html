@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presente!!</title>
+</head>
+<body>
+    <div class="coracao">
+        <div class="ok">
+          <h1>Eu te amo</h1>
+          <p>Parabéns</p>
+          <a href="carta.html">Abra a carta</a>
+        </div>
+        <div class="coracao2">
+          <div class="square"></div>
+          <div class="circle top"></div>
+          <div class="circle left"></div>
+        </div>
+      </div>
+
+    <style>
+      body{
+        margin-top: 600px;
+        margin-left: 500px;
+      }
+        .coracao{
+        width:300px;
+        height:300px;
+        position: relative;
+        }
+        .coracao2{
+        margin: auto;
+        width:300px;
+        height:300px;
+        position: relative;
+        animation: pulse 1s infinite alternate;
+        }
+
+        .ok{
+        font-size:40px;
+        text-align:center;
+        position: absolute;
+        width: 1000px;
+        z-index:1;
+        animation: pulse2 1s infinite alternate;
+        right: -350px;
+        margin-top:-80px;
+        font-weight:800;
+        font-family: 'Edu NSW ACT Foundation', cursive;
+        
+        }
+
+        p{
+        margin-top: -70px;
+        }
+        a{
+        margin-top: -100px;
+        letter-spacing:-4px;
+        }
+        .square{
+        width:300px;
+        height:300px;
+        background:blue;
+        position: absolute;
+        background:#d60501;
+        top:0;
+        left:0;
+        z-index:-1;
+        }
+
+        .circle{
+        width:300px;
+        height:300px;
+        background:#d60501;
+        border-radius:50%;
+        position: absolute;
+        }
+
+        .top{
+        top:150px;
+        }
+
+        .left{
+        left:150px;
+        }
+
+        @keyframes pulse {
+        0%{ transform:scale(0.9) rotate(-135deg);}
+        100%{ transform:scale(1.1) rotate(-135deg);}
+        }
+
+        @keyframes pulse2 {
+        0%{ transform:scale(0.9)}
+        100%{ transform:scale(1.1)}
+        }
+    </style>
+</body>
+</html>
